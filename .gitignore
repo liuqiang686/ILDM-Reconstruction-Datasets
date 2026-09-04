@@ -1,0 +1,4 @@
+/release_assets/
+/reconstructed/
+__pycache__/
+*.pyc

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "release_tag": "v1.0.0",
+  "generated_at_utc": "2026-09-04T08:28:09.104200+00:00",
+  "chunk_size_bytes": 1992294400,
+  "datasets": [
+    {
+      "original_name": "near_wall_cavitation.mat",
+      "original_bytes": 1837819274,
+      "original_sha256": "6ba95a5f2e4c25cc99d25f2011efec3e774d2ca97486d4e1a17d044c9af49501",
+      "physical_case": "Near-wall cavitation-bubble collapse",
+      "mat_format": "MATLAB v7.3/HDF5",
+      "parts": [
+        {
+          "name": "near_wall_cavitation.mat",
+          "bytes": 1837819274,
+          "sha256": "6ba95a5f2e4c25cc99d25f2011efec3e774d2ca97486d4e1a17d044c9af49501"
+        }
+      ]
+    },
+    {
+      "original_name": "riemann2d_1000.mat",
+      "original_bytes": 3946844400,
+      "original_sha256": "d79da2b31779eb33e02eea5326805c25f90342bb5ceb64f43629733fe9f969cc",
+      "physical_case": "Two-dimensional Riemann problem",
+      "mat_format": "MATLAB MAT-file",
+      "parts": [
+        {
+          "name": "riemann2d_1000.mat.part.001",
+          "bytes": 1992294400,
+          "sha256": "509240016817769076a0ca2e7944d1ed69bd6bbaa8dd6d52eb852592fde6c077"
+        },
+        {
+          "name": "riemann2d_1000.mat.part.002",
+          "bytes": 1954550000,
+          "sha256": "def2b44c1204d4779f3848502f76a31ad09ed69950f877e5eeb7715bffa28173"
+        }
+      ]
+    },
+    {
+      "original_name": "double_mach_revise.mat",
+      "original_bytes": 5002585776,
+      "original_sha256": "c85eb3f5366946086f192f85e3016737186adfa917c0468de502608ca8dd02df",
+      "physical_case": "Double Mach reflection",
+      "mat_format": "MATLAB MAT-file",
+      "parts": [
+        {
+          "name": "double_mach_revise.mat.part.001",
+          "bytes": 1992294400,
+          "sha256": "2f2cc937460adf645ba8f5da896c2d3ff3e12f89582320713fd18aa5625b8fef"
+        },
+        {
+          "name": "double_mach_revise.mat.part.002",
+          "bytes": 1992294400,
+          "sha256": "9de67bf80d1975dd44d617e37f18d4ec56ad745320dccb4adaed067f8f3c2ddc"
+        },
+        {
+          "name": "double_mach_revise.mat.part.003",
+          "bytes": 1017996976,
+          "sha256": "613070d55ad56a936b67625a2060bd106bed196882e6dc7cd3ebaf96d6b82452"
+        }
+      ],
+      "retained_frames": 900
+    }
+  ]
+}
