@@ -10,7 +10,7 @@ This repository provides the data package used to study hard-constrained reconst
 | `riemann2d_1000.mat` | Two-dimensional Riemann problem | MATLAB MAT-file |
 | `double_mach_revise.mat` | Double Mach reflection, 900 retained frames | MATLAB MAT-file |
 
-The binary datasets are distributed as assets of the `v1.0.0` GitHub Release. Files larger than the GitHub per-asset limit are split into numbered parts. The exact sizes and SHA-256 checksums are recorded in `dataset_manifest.json` and `SHA256SUMS`.
+The binary datasets are distributed as assets of the `v1.0.0` GitHub Release. Each MAT file is losslessly gzip-compressed and, when needed, split into numbered parts. The exact original and compressed sizes and SHA-256 checksums are recorded in `dataset_manifest.json` and `SHA256SUMS`.
 
 ## Download and reconstruct
 
@@ -22,7 +22,7 @@ gh release download v1.0.0 \
   --dir release_assets
 ```
 
-Reconstruct the original MAT files and verify all checksums:
+Join the parts, decompress the streams, and verify the original MAT files:
 
 ```bash
 python reassemble_dataset.py \
@@ -30,7 +30,7 @@ python reassemble_dataset.py \
   --output-dir datasets
 ```
 
-Use `--force` only when an existing reconstructed file should be replaced. The script validates each downloaded part before joining it and validates the complete output against the original-file SHA-256 checksum.
+Use `--force` only when an existing reconstructed file should be replaced. The script validates each downloaded part before joining it, verifies the complete gzip stream, and validates the decompressed output against the original-file SHA-256 checksum. It requires only the Python standard library.
 
 ## Integrity metadata
 

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 import shutil
@@ -42,8 +43,6 @@ def reconstruct_dataset(
 ) -> Path:
     parts = dataset["parts"]
     output_path = output_dir / dataset["original_name"]
-    resolved_output = output_path.resolve()
-
     for part in parts:
         verify(
             assets_dir / part["name"],
@@ -57,28 +56,45 @@ def reconstruct_dataset(
         )
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    direct_asset = len(parts) == 1 and parts[0]["name"] == dataset["original_name"]
-    direct_path = (assets_dir / parts[0]["name"]).resolve() if direct_asset else None
+    compression = dataset.get("compression")
+    temporary_path = output_path.with_suffix(output_path.suffix + ".tmp")
+    compressed_path = output_path.with_suffix(output_path.suffix + ".gz.tmp")
+    temporary_path.unlink(missing_ok=True)
+    compressed_path.unlink(missing_ok=True)
 
-    if direct_asset and direct_path == resolved_output:
-        result = output_path
-    elif direct_asset:
-        shutil.copyfile(direct_path, output_path)
-        result = output_path
-    else:
-        temporary_path = output_path.with_suffix(output_path.suffix + ".tmp")
-        if temporary_path.exists():
-            temporary_path.unlink()
-        try:
+    try:
+        if compression and compression["algorithm"] == "gzip":
+            with compressed_path.open("wb") as target:
+                for part in parts:
+                    with (assets_dir / part["name"]).open("rb") as source:
+                        shutil.copyfileobj(source, target, length=BUFFER_SIZE)
+            verify(
+                compressed_path,
+                int(compression["compressed_bytes"]),
+                compression["compressed_sha256"],
+            )
+            with gzip.open(compressed_path, "rb") as source, temporary_path.open(
+                "wb"
+            ) as target:
+                shutil.copyfileobj(source, target, length=BUFFER_SIZE)
+        elif compression:
+            raise ValueError(
+                f"Unsupported compression algorithm: {compression['algorithm']}"
+            )
+        else:
             with temporary_path.open("wb") as target:
                 for part in parts:
                     with (assets_dir / part["name"]).open("rb") as source:
                         shutil.copyfileobj(source, target, length=BUFFER_SIZE)
-            temporary_path.replace(output_path)
-        except Exception:
-            temporary_path.unlink(missing_ok=True)
-            raise
-        result = output_path
+
+        temporary_path.replace(output_path)
+    except Exception:
+        temporary_path.unlink(missing_ok=True)
+        raise
+    finally:
+        compressed_path.unlink(missing_ok=True)
+
+    result = output_path
 
     verify(result, int(dataset["original_bytes"]), dataset["original_sha256"])
     return result

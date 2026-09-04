@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "release_tag": "v1.0.0",
-  "generated_at_utc": "2026-09-04T08:47:06.064393+00:00",
+  "generated_at_utc": "2026-09-04T09:07:12.753373+00:00",
   "chunk_size_bytes": 536870912,
   "datasets": [
     {
@@ -10,26 +10,32 @@
       "original_sha256": "6ba95a5f2e4c25cc99d25f2011efec3e774d2ca97486d4e1a17d044c9af49501",
       "physical_case": "Near-wall cavitation-bubble collapse",
       "mat_format": "MATLAB v7.3/HDF5",
+      "compression": {
+        "algorithm": "gzip",
+        "level": 1,
+        "compressed_bytes": 1828830576,
+        "compressed_sha256": "bc43243faf2d69c5cb247d4b95082a1343b64364f5ddb9097105f40860e5a2cf"
+      },
       "parts": [
         {
-          "name": "near_wall_cavitation.mat.part.001",
+          "name": "near_wall_cavitation.mat.gz.part.001",
           "bytes": 536870912,
-          "sha256": "4c8ea7815df58cb063da61e9ba768adaf7668b61da25235a6d5c9c176cf999dc"
+          "sha256": "22239053c8a261a994ad89f4724e3b7ebce2a025aa89d75f686c13c939d2739c"
         },
         {
-          "name": "near_wall_cavitation.mat.part.002",
+          "name": "near_wall_cavitation.mat.gz.part.002",
           "bytes": 536870912,
-          "sha256": "34c722451bf5d2c145369a463c91cc192eaa71a6e21e92c97fd9639136bf44d7"
+          "sha256": "9385ad493a7aec498f60f83385881cf1850207fda27777cd2386140918185148"
         },
         {
-          "name": "near_wall_cavitation.mat.part.003",
+          "name": "near_wall_cavitation.mat.gz.part.003",
           "bytes": 536870912,
-          "sha256": "249a1f739d10905dc630d3743a12aaaa99ceb508c69990875ba1e64cac023f78"
+          "sha256": "3b79307cafbc10674ff5ee6703ce97f5bdc415bee53532cba37c5f0cd59ba606"
         },
         {
-          "name": "near_wall_cavitation.mat.part.004",
-          "bytes": 227206538,
-          "sha256": "56107e26f7da94162aec99c0fa866a1096179c59e7a1fc56624243ade97c5bf9"
+          "name": "near_wall_cavitation.mat.gz.part.004",
+          "bytes": 218217840,
+          "sha256": "2c7fe509676f0f75e2b3a8090705786b97a26146ea0b7815ab35efd5823fe735"
         }
       ]
     },
@@ -39,46 +45,37 @@
       "original_sha256": "d79da2b31779eb33e02eea5326805c25f90342bb5ceb64f43629733fe9f969cc",
       "physical_case": "Two-dimensional Riemann problem",
       "mat_format": "MATLAB MAT-file",
+      "compression": {
+        "algorithm": "gzip",
+        "level": 1,
+        "compressed_bytes": 2377546394,
+        "compressed_sha256": "6252dc6ab7038d1d39835b60bc412d9f48321b6f0031583803f3466273668447"
+      },
       "parts": [
         {
-          "name": "riemann2d_1000.mat.part.001",
+          "name": "riemann2d_1000.mat.gz.part.001",
           "bytes": 536870912,
-          "sha256": "21b4724594cf325d03f3d2b9a0fafee83b22cef2baac31a0483d1af7b50bc935"
+          "sha256": "46ed9b7ed11ab4268c5e3dd00cd1a00b04177f3fa433153f0b9e473fa3510bc2"
         },
         {
-          "name": "riemann2d_1000.mat.part.002",
+          "name": "riemann2d_1000.mat.gz.part.002",
           "bytes": 536870912,
-          "sha256": "92bf1952668023cf98f124d3a1978a5dffe19cc08de61593fa4ba94e87e0b2ca"
+          "sha256": "a354deb9c004b55ab1a17b5841fe325ce393fa4a835a7c55cf3efd418085bb7b"
         },
         {
-          "name": "riemann2d_1000.mat.part.003",
+          "name": "riemann2d_1000.mat.gz.part.003",
           "bytes": 536870912,
-          "sha256": "4d325df402c413864106f8057883e684d79afa14f95e9011ad84570f4622b9fe"
+          "sha256": "fc03682b5bb9f71ca72338b59686653c70fcd771b51610ccc86fba50e0a6fd40"
         },
         {
-          "name": "riemann2d_1000.mat.part.004",
+          "name": "riemann2d_1000.mat.gz.part.004",
           "bytes": 536870912,
-          "sha256": "4f1217f87baca0e6d7a12cd4d3af4e14d84db2eccc76de37bf4650b8679661b4"
+          "sha256": "b4b16a96981e7fe0e94925974a7b0a47ba5c0a5454ae015927eb20a824759a53"
         },
         {
-          "name": "riemann2d_1000.mat.part.005",
-          "bytes": 536870912,
-          "sha256": "db57cf354e01d6911779966742e223a695fa6d38119260cda4b89cfb7aec2e6b"
-        },
-        {
-          "name": "riemann2d_1000.mat.part.006",
-          "bytes": 536870912,
-          "sha256": "bf8ab9330c2e7ec17bcb1b85cf3e12b2fc7cca7f21d346710a56483f9d9b5015"
-        },
-        {
-          "name": "riemann2d_1000.mat.part.007",
-          "bytes": 536870912,
-          "sha256": "d7b0059d9cc9632c6797406890e537a578264ae362be5d34d9e62204a1d105a9"
-        },
-        {
-          "name": "riemann2d_1000.mat.part.008",
-          "bytes": 188748016,
-          "sha256": "eefa656b934d89c2b347a969ef73d4890aa8f78b56b327e4a41387f1c6aea4fd"
+          "name": "riemann2d_1000.mat.gz.part.005",
+          "bytes": 230062746,
+          "sha256": "a0560fee38ad24198f599e1e63ce143b631ce72fcd0b63580c463684b05aba95"
         }
       ]
     },
@@ -88,56 +85,17 @@
       "original_sha256": "c85eb3f5366946086f192f85e3016737186adfa917c0468de502608ca8dd02df",
       "physical_case": "Double Mach reflection",
       "mat_format": "MATLAB MAT-file",
+      "compression": {
+        "algorithm": "gzip",
+        "level": 1,
+        "compressed_bytes": 495130428,
+        "compressed_sha256": "446ed462b11b843b14d1c11f2d7991e4ade0466bd870bd25ed9d0a775b985dcc"
+      },
       "parts": [
         {
-          "name": "double_mach_revise.mat.part.001",
-          "bytes": 536870912,
-          "sha256": "758a1265c71072e4a89296aeb58f701107dde170b46c20432bc4b162465f649e"
-        },
-        {
-          "name": "double_mach_revise.mat.part.002",
-          "bytes": 536870912,
-          "sha256": "8d4526e5392a122ca0b40af8c6bef1359d46aa005bac37bd697f74147c57c275"
-        },
-        {
-          "name": "double_mach_revise.mat.part.003",
-          "bytes": 536870912,
-          "sha256": "79e09af1da88d9a048d8a5cf3352270877ccb599241832979020df7b51340448"
-        },
-        {
-          "name": "double_mach_revise.mat.part.004",
-          "bytes": 536870912,
-          "sha256": "a040aa68868da2eb8261c53282ccbbecf6530afb6016c4f490ce68416b1b0991"
-        },
-        {
-          "name": "double_mach_revise.mat.part.005",
-          "bytes": 536870912,
-          "sha256": "c0bba369b70b9b5cf6c4d26548da439fa6846ecae86c3d4794059cbeb4a6c1e0"
-        },
-        {
-          "name": "double_mach_revise.mat.part.006",
-          "bytes": 536870912,
-          "sha256": "1be0edc8ae866a7b0b063a6e53e01ff738b21b0f0ef99bfe36c986d2d15f9a12"
-        },
-        {
-          "name": "double_mach_revise.mat.part.007",
-          "bytes": 536870912,
-          "sha256": "36d35b35e0f27881dd8881b8c32b16aa34cc4055c44e72d1ce8b6d71ec11212f"
-        },
-        {
-          "name": "double_mach_revise.mat.part.008",
-          "bytes": 536870912,
-          "sha256": "26b88dfe4af08df9d580348f3ea444cf79167f710fc0ec2dd24a2847af473ecb"
-        },
-        {
-          "name": "double_mach_revise.mat.part.009",
-          "bytes": 536870912,
-          "sha256": "d85fad0a52b4115d7a44638f1a44870f357729b9d5e516c1f87cb00ce45ccd4a"
-        },
-        {
-          "name": "double_mach_revise.mat.part.010",
-          "bytes": 170747568,
-          "sha256": "8b7119718cf2e5ace345ff069b128e9afa15285a34a10aa17de394baa6cf5dbb"
+          "name": "double_mach_revise.mat.gz",
+          "bytes": 495130428,
+          "sha256": "446ed462b11b843b14d1c11f2d7991e4ade0466bd870bd25ed9d0a775b985dcc"
         }
       ],
       "retained_frames": 900
