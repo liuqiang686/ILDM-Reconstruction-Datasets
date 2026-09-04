@@ -10,7 +10,7 @@ This repository provides the data package used to study hard-constrained reconst
 | `riemann2d_1000.mat` | Two-dimensional Riemann problem | MATLAB MAT-file |
 | `double_mach_revise.mat` | Double Mach reflection, 900 retained frames | MATLAB MAT-file |
 
-The binary datasets are distributed as assets of the `v1.0.0` GitHub Release. Each MAT file is losslessly gzip-compressed and, when needed, split into numbered parts. The exact original and compressed sizes and SHA-256 checksums are recorded in `dataset_manifest.json` and `SHA256SUMS`.
+The binary datasets are distributed as assets of the `v1.0.0` GitHub Release. Each MAT file is losslessly gzip-compressed and, when needed, split into ordered parts or smaller transfer segments. The exact original and compressed sizes, reconstruction order, and SHA-256 checksums are recorded in `dataset_manifest.json` and `SHA256SUMS`.
 
 ## Download and reconstruct
 

@@ -6,4 +6,4 @@ This release contains three MAT datasets for reconstructing discontinuous compre
 - a two-dimensional Riemann problem;
 - double Mach reflection with 900 retained time frames.
 
-The MAT files are losslessly gzip-compressed, with large streams provided as ordered `.part.###` assets. Download all assets and run `reassemble_dataset.py` from the repository to recover and verify the original MAT files. Exact SHA-256 checksums are provided in `dataset_manifest.json` and `SHA256SUMS`.
+The MAT files are losslessly gzip-compressed, with large streams provided as ordered `.part.###` assets. Two Riemann ranges are further divided into 32 MiB `.segment.###` assets for reliable transfer over unstable connections. Download all assets and run `reassemble_dataset.py` from the repository to recover and verify the original MAT files. Exact ordering and SHA-256 checksums are provided in `dataset_manifest.json` and `SHA256SUMS`.
